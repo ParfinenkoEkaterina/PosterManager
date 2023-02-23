@@ -176,8 +176,32 @@ public class FilmManagerTest {
         int expected = 3;
         Arrays.stream(new FilmManager[]{new FilmManager()}).limit(3);
 
+    }
 
+    @Test
+    public void shouldSetLimit() {
+        FilmManager manager = new FilmManager();
 
+        new FilmManager();
+        int limit = 67;
+
+        int expected = 67;
+        FilmManager[] actual = new FilmManager[limit];
+
+        Arrays.stream(new FilmManager[]{new FilmManager()}).limit(67);
+    }
+
+    @Test
+    public void shouldNotGiveFilmsAboveMax() {
+        FilmManager manager = new FilmManager();
+
+        new FilmManager();
+        int limit = 100;
+
+        int expected = 0;
+        FilmManager[] actual = new FilmManager[limit];
+
+        Arrays.stream(new FilmManager[]{new FilmManager()}).limit(10);
     }
 
 
