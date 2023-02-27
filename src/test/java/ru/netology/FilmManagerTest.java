@@ -204,5 +204,14 @@ public class FilmManagerTest {
         Arrays.stream(new FilmManager[]{new FilmManager()}).limit(10);
     }
 
+    @Test
+    void shouldShowNothing()  {
+        FilmManager manager = new FilmManager(0);
+        String[] actual = manager.findLast();
+        FilmManager[] expected = new FilmManager[0];
+        Assertions.assertArrayEquals(expected, actual);
+
+    }
+
 
 }

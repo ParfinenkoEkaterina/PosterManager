@@ -3,7 +3,7 @@ package ru.netology;
 
 public class FilmManager {
     private String[] films = new String[0];
-    private int limit;
+    private static int limit;
 
     public FilmManager() {
         this.limit = 10;
