@@ -83,23 +83,6 @@ public class FilmManagerTest {
         Assertions.assertArrayEquals(expected, actual);
     }
 
-    @Test
-    public void shouldGiveThisLimit() {
-        String film1 = "Film I";
-        String film2 = "Film II";
-        String film3 = "Film III";
-
-        FilmManager manager = new FilmManager();
-        manager.addFilm(film1);
-        manager.addFilm(film2);
-        manager.addFilm(film3);
-
-        int limit = 3;
-
-        int expected = 3;
-        Arrays.stream(new FilmManager[]{new FilmManager()}).limit(3);
-
-    }
 
     @Test
     void shouldShowNothing() {
